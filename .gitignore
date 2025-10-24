@@ -1,0 +1,49 @@
+﻿[Ll]ibrary/
+[Tt]emp/
+[Bb]uild/
+[Bb]uilds/
+obj/
+MemoryCaptures/
+sysinfo.txt
+
+# User-specific
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Cache
+cache/
+*.log
+
+# Build Artifacts
+*.apk
+*.aab
+*.app
+*.ipa
+*.exe
+
+# Media (optional Git LFS)
+*.psd
+*.png
+*.jpg
+*.jpeg
+*.fbx
+*.wav
+*.mp3
+*.mp4
+*.blend

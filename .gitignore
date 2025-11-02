@@ -17,6 +17,7 @@ sysinfo.txt
 *.pidb
 *.booproj
 *.svd
+UserSettings/Layouts/*.dwlt
 
 # OS generated
 .DS_Store

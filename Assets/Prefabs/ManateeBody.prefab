@@ -40,17 +40,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4531600209773789312}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8bcd2c203aa54034592760780c008ea4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   manateePrefab: {fileID: 4531600209773789312}
-  sand: {fileID: 0}
   count: 10
-  minRadius: 2
-  maxRadius: 3
-  verticalOffset: -4
+  spacing: 3
+  depth: -4
 --- !u!1001 &3752130097199036071
 PrefabInstance:
   m_ObjectHideFlags: 0

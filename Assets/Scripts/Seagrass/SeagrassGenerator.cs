@@ -1,13 +1,12 @@
 using UnityEngine;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 
 public class AutoSeagrassGenerator : MonoBehaviour
 {
+    [Header("Assign your Sand / Ground object (the plane)")]
+    public Transform sand; // ← Drag Ground object here
+
     [Header("Seagrass Settings")]
     public int patchCount = 150;
-    public Vector2 areaSize = new Vector2(60, 60);
     public int bladesPerPatch = 10;
     public float bladeHeight = 1.5f;
     public float bladeWidth = 0.1f;
@@ -31,17 +30,28 @@ public class AutoSeagrassGenerator : MonoBehaviour
         seaMat = new Material(Shader.Find("Universal Render Pipeline/Lit"));
         seaMat.doubleSidedGI = true;
         seaMat.SetFloat("_Surface", 0); // opaque
-        seaMat.color = new Color(0.25f, 0.8f, 0.45f); // seagrass green
+        seaMat.color = new Color(0.25f, 0.8f, 0.45f);
     }
 
     void GenerateSeagrass()
     {
+        // Get size of sand mesh
+        MeshRenderer r = sand.GetComponent<MeshRenderer>();
+        if (r == null)
+        {
+            Debug.LogError("❌ The object assigned as Sand has no MeshRenderer. Assign your Ground plane.");
+            return;
+        }
+
+        Vector3 size = r.bounds.size;
+        Vector3 center = r.bounds.center;
+
         for (int i = 0; i < patchCount; i++)
         {
             Vector3 pos = new Vector3(
-                transform.position.x + Random.Range(-areaSize.x / 2, areaSize.x / 2),
+                center.x + Random.Range(-size.x / 2, size.x / 2),
                 Random.Range(minY, maxY),
-                transform.position.z + Random.Range(-areaSize.y / 2, areaSize.y / 2)
+                center.z + Random.Range(-size.z / 2, size.z / 2)
             );
 
             GameObject patch = new GameObject("SeagrassPatch_" + i);
@@ -63,8 +73,9 @@ public class AutoSeagrassGenerator : MonoBehaviour
                 Renderer rend = blade.GetComponent<Renderer>();
                 rend.sharedMaterial = seaMat;
 
-                blade.AddComponent<SimpleSway>().speed = swaySpeed;
-                blade.GetComponent<SimpleSway>().amplitude = swayAmplitude;
+                SimpleSway sway = blade.AddComponent<SimpleSway>();
+                sway.speed = swaySpeed;
+                sway.amplitude = swayAmplitude;
             }
         }
     }

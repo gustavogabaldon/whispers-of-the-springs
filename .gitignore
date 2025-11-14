@@ -1,14 +1,26 @@
-﻿[Ll]ibrary/
+﻿# Unity generated folders
+[Ll]ibrary/
 [Tt]emp/
+[Oo]bj/
 [Bb]uild/
 [Bb]uilds/
-obj/
+[Ll]ogs/
 MemoryCaptures/
+
+# Builds
+*.apk
+*.aab
+*.exe
+*.app
+*.ipa
+
+# Unity cache
 sysinfo.txt
 
-# User-specific
+# Visual Studio / Rider
+.vscode/
+.idea/
 *.csproj
-*.unityproj
 *.sln
 *.suo
 *.tmp
@@ -18,32 +30,8 @@ sysinfo.txt
 *.booproj
 *.svd
 
-# OS generated
+# OS files
 .DS_Store
 Thumbs.db
 
-# IDEs
-.vscode/
-.idea/
-
-# Cache
-cache/
-*.log
-
-# Build Artifacts
-*.apk
-*.aab
-*.app
-*.ipa
-*.exe
-
-# Media (optional Git LFS)
-*.psd
-*.png
-*.jpg
-*.jpeg
-*.fbx
-*.wav
-*.mp3
-*.mp4
-*.blend
+# (No png, fbx, wav, mp3, jpg, blend, etc.)

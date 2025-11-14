@@ -1,4 +1,5 @@
-﻿[Ll]ibrary/
+﻿# Unity generated folders
+[Ll]ibrary/
 [Tt]emp/
 [Bb]uild/
 [Bb]uilds/
@@ -48,3 +49,9 @@ cache/
 *.mp3
 *.mp4
 *.blend
+
+# Optional Unity YAML/scene files (be careful)
+*.unity
+*.prefab
+*.mat
+*.meta

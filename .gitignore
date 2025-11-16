@@ -2,48 +2,21 @@
 [Tt]emp/
 [Bb]uild/
 [Bb]uilds/
-obj/
+[Oo]bj/
+[Oo]bj/*
+[Uu]serSettings/
 MemoryCaptures/
-sysinfo.txt
 
-# User-specific
-*.csproj
-*.unityproj
-*.sln
-*.suo
-*.tmp
-*.user
-*.userprefs
-*.pidb
-*.booproj
-*.svd
+# NEVER ignore .meta files
+!*.meta
 
-# OS generated
+# OS
 .DS_Store
 Thumbs.db
 
-# IDEs
+# IDE
 .vscode/
 .idea/
 
-# Cache
-cache/
+# Logs
 *.log
-
-# Build Artifacts
-*.apk
-*.aab
-*.app
-*.ipa
-*.exe
-
-# Media (optional Git LFS)
-*.psd
-*.png
-*.jpg
-*.jpeg
-*.fbx
-*.wav
-*.mp3
-*.mp4
-*.blend

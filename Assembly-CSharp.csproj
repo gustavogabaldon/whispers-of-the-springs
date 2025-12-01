@@ -103,6 +103,7 @@
     <Compile Include="Assets\Samples\Universal Render Pipeline\17.0.4\URP RenderGraph Samples\Blit w. FrameData\BlitRendererFeature.cs" />
     <Compile Include="Assets\Samples\Universal Render Pipeline\17.0.4\URP RenderGraph Samples\OutputTexture\OutputTextureRendererFeature.cs" />
     <Compile Include="Assets\FINAL PROJECT ASSETS\UnderwaterFantasy\Scripts\Done_BGScroller.cs" />
+    <Compile Include="Assets\LilyPadSway.cs" />
     <Compile Include="Assets\Art\AQUAS-Lite\Scripts\AQUAS_Lite_Reflection.cs" />
     <Compile Include="Assets\Scripts\dialogue.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
